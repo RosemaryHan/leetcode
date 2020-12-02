@@ -1,2 +1,5 @@
 server:
   port: 8004
+
+config:
+  info: test master
