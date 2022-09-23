@@ -53,6 +53,7 @@ public class MergeTwoSortedLists {
 
     //暴力循环
     public ListNode MergeTwoLists(ListNode l1, ListNode l2) {
+        //直接用中间链表来承担合并
         ListNode prehead = new ListNode(-1);
 
         ListNode prev = prehead;
@@ -69,10 +70,10 @@ public class MergeTwoSortedLists {
 
         // 合并后 l1 和 l2 最多只有一个还未被合并完，我们直接将链表末尾指向未合并完的链表即可
         prev.next = l1 == null ? l2 : l1;
-
         return prehead.next;
     }
 
+    //递归 从最小的点找起
     public ListNode mergeTwoLists_1(ListNode l1, ListNode l2) {
         if (l1 == null) {
             return l2;
