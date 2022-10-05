@@ -25,6 +25,8 @@ package com.algorithm.demo.linearlist.linkedlist.algorithm;
  * @Version 1.0
  */
 
+import java.util.ArrayList;
+
 /**
  * Definition for singly-linked list.
  * public class ListNode {
@@ -75,6 +77,8 @@ public class MergeTwoSortedLists {
 
     //递归 从最小的点找起
     public ListNode mergeTwoLists_1(ListNode l1, ListNode l2) {
+        ArrayList<String> strings = new ArrayList<>();
+        strings.add("34");
         if (l1 == null) {
             return l2;
         } else if (l2 == null) {
